@@ -1,0 +1,35 @@
+//in order to use this, you can just say `@include respond-to('medium'){ // styles go here }` or if there is a breakpoint that does not fit the small/medium/large model, you can just pass in the breakpoint
+ // kristen provided large @media (min-width: 769px) 
+
+ @mixin respond-to($breakpoint) {
+    @if $breakpoint == "small" {
+      @media (max-width: 480px) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == "medium" {
+      @media (max-width: 768px) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == "large" {
+      @media (max-width: 940px) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == "xlarge" {
+      @media (min-width: 1500px) {
+        @content;
+      }
+    }
+  
+  
+    @else {
+      @media ($breakpoint) {
+        @content;
+      }
+    }
+  }
