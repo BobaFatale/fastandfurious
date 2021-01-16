@@ -9,3 +9,29 @@ body {
 section {
     padding: 4px 24px;
 }
+
+.schedule{
+    padding-left: 4px;
+    &__date {
+        margin-bottom: 8px;
+        &--past {
+            color: rgb(153, 153, 153);
+        }
+        &--current {
+            color: magenta
+        }
+    }
+}
+
+.rainbowText {
+    background: linear-gradient(180deg, rgba(231,0,0,1) 0%, rgba(231,0,0,1) 25%, rgba(255,140,0,1) 25%, rgba(255,140,0,1) 37.5%, rgba(255,239,0,1) 37.5%, rgba(255,239,0,1) 50%, rgba(0,129,31,1) 50%, rgba(0,129,31,1) 62.5%, rgba(0,68,255,1) 62.5%, rgba(0,68,255,1) 75%, rgba(118,0,137,1) 75%, rgba(118,0,137,1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+section.survey {
+    padding: 4px;
+}
+iframe{
+    overflow:hidden;
+}
